@@ -1,0 +1,87 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(135deg, #e0f2fe, #fce7f3);
+  padding: 25px;
+  color: black;
+  font-size: 25px;
+  padding: 25px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.card {
+  background: white;
+  color: black;
+  padding: 28px 36px;
+  border-radius: 16px;
+  box-shadow: 0 10px rgba(0, 0, 0, .12);
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+button {
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: violet;
+  cursor: pointer;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 0;
+  background: white;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+  cursor: pointer;
+  font-size: 26px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  transition: transform 0.25s ease, background 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.08);
+}
+
+.icon {
+  grid-area: 1/1;
+  transition: opacity 0.25s ease, transform 0.35s ease;
+}
+
+.moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+body.dark-mode{
+  background: #0d0d0d;
+  color: white;
+}
+
+body.dark-mode.card {
+  background: #1c1c1c;
+  color: white;
+}
+
+body.dark-mode.theme-toggle {
+  background: #1c1c1c;
+}
+
+body.dark-mode.sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5)
+}
+
+body.dark-mode.moon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
